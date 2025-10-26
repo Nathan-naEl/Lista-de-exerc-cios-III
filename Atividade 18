@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char a[200], b[200];
+    printf("Digite a primeira palavra: ");
+    scanf("%199s", a);
+    printf("Digite a segunda palavra: ");
+    scanf("%199s", b);
+    if (strcmp(a,b) == 0) printf("Iguais\n");
+    else printf("Diferentes\n");
+    return 0;
+}
