@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int v[50];
+    int i, j, usado;
+    srand((unsigned)time(NULL));
+    for(i=0;i<50;i++) v[i] = rand() % 100;
+    printf("Vetor: ");
+    for(i=0;i<50;i++) printf("%d ", v[i]);
+    printf("\nVetor unicos: ");
+    for(i=0;i<50;i++) {
+        usado = 0;
+        for(j=0;j<i;j++) if (v[j]==v[i]) { usado = 1; break; }
+        if (!usado) printf("%d ", v[i]);
+    }
+    printf("\n");
+    return 0;
+}
