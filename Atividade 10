@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int m[4][4];
+    int i,j;
+    for(i=0;i<4;i++) for(j=0;j<4;j++) {
+        printf("m[%d][%d]: ", i, j);
+        scanf("%d", &m[i][j]);
+    }
+    for(i=0;i<4;i++) {
+        int mx = m[i][0];
+        for(j=1;j<4;j++) if (m[i][j] > mx) mx = m[i][j];
+        printf("Maior da linha %d: %d\n", i, mx);
+    }
+    return 0;
+}
