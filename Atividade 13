@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int m[3][3];
+    int i,j;
+    for(i=0;i<3;i++) for(j=0;j<3;j++) {
+        printf("m[%d][%d]: ", i, j);
+        scanf("%d", &m[i][j]);
+    }
+    int maiorLinha = 0;
+    int soma, maiorSoma = -2147483648;
+    for(i=0;i<3;i++) {
+        soma = 0;
+        for(j=0;j<3;j++) soma += m[i][j];
+        if (soma > maiorSoma) { maiorSoma = soma; maiorLinha = i; }
+    }
+    printf("Linha com maior soma: %d (soma = %d)\n", maiorLinha, maiorSoma);
+    return 0;
+}
